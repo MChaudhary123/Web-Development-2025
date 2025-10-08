@@ -25,3 +25,18 @@ INSERT INTO Rentals (id, customer_id, movie_title, rental_price) VALUES
 (3, 3, 'Harry Potter', '5.99'),
 (4, 4, 'Star Wars', '8.99'),
 (5, 5, 'Divergent', '1.99');
+
+SELECT *
+FROM Customers;
+
+SELECT *
+FROM Rentals;
+
+SELECT name, membership_level
+FROM Customers;
+
+SELECT movie_title, rental_price
+FROM Rentals;
+
+SELECT *
+FROM Customers ,Rentals;
