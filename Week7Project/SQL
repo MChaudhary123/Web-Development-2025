@@ -1,1 +1,13 @@
-will update..
+CREATE TABLE Customers (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+membership_level TEXT
+);
+
+CREATE TABLE Rentals (
+  id INTEGER PRIMARY KEY,
+  customer_id INTEGER,
+  movie_title TEXT,
+  rental_price REAL,
+  FOREIGN KEY (customer_id) REFERENCES Customers(id)
+);
