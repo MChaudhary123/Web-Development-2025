@@ -11,3 +11,17 @@ CREATE TABLE Rentals (
   rental_price REAL,
   FOREIGN KEY (customer_id) REFERENCES Customers(id)
 );
+
+INSERT INTO Customers (id, name, membership_level) VALUES
+(1, 'Avery', 'Diamond'),
+(2, 'Joe', 'Gold'),
+(3, 'Mike', 'Silver'),
+(4, 'Jordan', 'Bronze'),
+(5, 'Seth', 'Platinum');
+
+INSERT INTO Rentals (id, customer_id, movie_title, rental_price) VALUES
+(1, 1, 'Star Trek', '2.99'),
+(2, 2, 'Happy Gilmore', '4.99'),
+(3, 3, 'Harry Potter', '5.99'),
+(4, 4, 'Star Wars', '8.99'),
+(5, 5, 'Divergent', '1.99');
