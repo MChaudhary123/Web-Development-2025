@@ -1,17 +1,20 @@
+-- Create a table to store customer information
 CREATE TABLE Customers (
-  id INTEGER PRIMARY KEY,
-  name TEXT,
-membership_level TEXT
+  id INTEGER PRIMARY KEY,          
+  name TEXT,                       
+  membership_level TEXT         
 );
 
+-- Create a table to store rental information
 CREATE TABLE Rentals (
-  id INTEGER PRIMARY KEY,
-  customer_id INTEGER,
-  movie_title TEXT,
-  rental_price REAL,
-  FOREIGN KEY (customer_id) REFERENCES Customers(id)
+  id INTEGER PRIMARY KEY,         
+  customer_id INTEGER,             
+  movie_title TEXT,                
+  rental_price REAL,               
+  FOREIGN KEY (customer_id) REFERENCES Customers(id)  -- Link rentals to customers
 );
 
+-- Insert sample data into the Customers table
 INSERT INTO Customers (id, name, membership_level) VALUES
 (1, 'Avery', 'Diamond'),
 (2, 'Joe', 'Gold'),
@@ -19,6 +22,7 @@ INSERT INTO Customers (id, name, membership_level) VALUES
 (4, 'Jordan', 'Bronze'),
 (5, 'Seth', 'Platinum');
 
+-- Insert sample data into the Rentals table
 INSERT INTO Rentals (id, customer_id, movie_title, rental_price) VALUES
 (1, 1, 'Star Trek', '2.99'),
 (2, 2, 'Happy Gilmore', '4.99'),
@@ -26,17 +30,22 @@ INSERT INTO Rentals (id, customer_id, movie_title, rental_price) VALUES
 (4, 4, 'Star Wars', '8.99'),
 (5, 5, 'Divergent', '1.99');
 
+-- Display all data from the Customers table
 SELECT *
 FROM Customers;
 
+-- Display all data from the Rentals table
 SELECT *
 FROM Rentals;
 
+-- Display only the name and membership level of customers
 SELECT name, membership_level
 FROM Customers;
 
+-- Display only the movie title and rental price from rentals
 SELECT movie_title, rental_price
 FROM Rentals;
 
+-- Display all columns from both tables (Cartesian join)
 SELECT *
-FROM Customers ,Rentals;
+FROM Customers, Rentals;
