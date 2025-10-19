@@ -1,27 +1,80 @@
-<!-- Muhammad Chaudhry - 9/6/2025 -->
+<!-- Muhammad Chaudhry  -->
 
 <! DOCTYPE html>
 <html lang="en">
 
 	<head>
-		<meta charset = "URF-8">
+		<meta charset = "UTF-8">
 		<title> CS490 WD Project</title>
+		<link rel= "stylesheet" href = "styles.css">
+		<meta name = "viewport" content = "width = device-width, intitial scale=1.0">
 	</head>
 	
 	<body>
 		<h1> CS 490 WD Projects</h1>
+		<button id="darkModeBtn">Toggle Dark Mode</button>
 		
 		<nav> 
 			<a href = "https://mchaudhary123.github.io/Web-Development-2025/"> Home </a> &nbsp | &nbsp
-			<a href =  "Week2Project/home.html" > Parks & Rec</a>  &nbsp | &nbsp
-			<a href =  "Week3Project/home.html" > Cozy Cafe </a> &nbsp | &nbsp
-			<a href =  "Week4Project/home.html" > Welcome to Paris </a> &nbsp | &nbsp
-			<a href =  "Week5Project/home.html" > Tech Product Showcase </a> &nbsp | &nbsp
-			<a href =  "Week6Project/home.html" > Shopping List </a> &nbsp | &nbsp
-			<a href =  "Week7Project/SQL" > Rental  </a> &nbsp | &nbsp
-
-
+			<a href = "#projects"> Projects </a> &nbsp | &nbsp
+			<a href = "#contact"> Contact </a>
 		</nav>
+		
+		<main>
+			<section id = "projects" class = "projects">
+			<div class ="card">
+				<h3> Parks and Rec </h3>
+				<p> A fun, nature inspired page highlighting local parks and recreation areas. </p>
+				<a href =  "Week2Project/home.html" > Parks & Rec</a>  
+			</div>
 			
+			<div class ="card">
+				<h3> Cozy Cafe </h3>
+				<p> A welcoming landing page for a cafe, featuring menu and design details </p>
+				<a href =  "Week3Project/home.html" > Cozy Cafe</a>  
+			</div>
+			
+			<div class ="card">
+				<h3>  Welcome to Paris </h3>
+				<p> A travel-themed page showcasing famous atractions in Paris. </p>
+				<a href =  "Week4Project/home.html" > Welcome to Paris</a>  
+			</div>
+			
+			<div class ="card">
+				<h3> Tech Product Showcase </h3>
+				<p> Interactive gallery of modern tech. </p>
+				<a href =  "Week5Project/home.html" > Tech Product Showcase</a>  
+			</div>
+			
+			<div class ="card">
+				<h3> Shopping List </h3>
+				<p> A dynamic shopping list app that allows users to add, edit,and remove items.</p>
+				<a href =  "Week6Project/home.html" > Shopping List</a>  
+			</div>
+			
+			<div class ="card">
+				<h3> Rental System </h3>
+				<p> A mock rental system demonstrating SQL data integration </p>
+				<a href =  "Week7Project/SQL" > Rental System</a>  
+			</div>
+		</section>
+		
+		<section id = "contact" class ="contact">
+			<h2> Contact </h2>
+			<p> Feel free to reach out or view my work: </p>
+			<a href = "mailto.muhammadchaudhary263@gmail.com"> muhammadchaudhary263@gmail.com</a> <br>
+			<a href = "https://github.com/MChaudhary123" target = "_blank"> Github </a> 
+		</main>
+		
+		<footer>
+		
+			<p> © <span id ="year"> </span> Muhammad Chaudhry. All rights reserved.
+		</footer>
+		
+		<script>
+			document.getElementById("year").textContent = new Date().getFullYear();
+		</script> 
+		<script src="script.js"></script>
+
 	</body>
 	</html>
