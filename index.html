@@ -1,0 +1,95 @@
+<!-- Muhammad Chaudhry - 9/6/2025 -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title> Welcome To My Website</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+
+	<body>
+	<!--NAVBAR -->
+	<nav>
+	<div class="container">
+		<h2> Welcome To My Website! </h2>
+		<div>
+			<a href="#about">About</a>
+			<a href="#education">Education</a>
+			<a href="#resume">Resume</a>
+			<a href="#contact">Contact</a>
+		</div>
+	</div>
+  </nav>
+
+  <!--  HERO / PROFESSIONAL IMAGE  -->
+  <section class="hero">
+    <div>
+      <img src="Cover Photo.png" alt= "Professional Image" class="hero-image" />
+      <h1> Hello, I'm Muhammad Chaudhry</h1>
+      <p>  Software Developer | 3rd Year Comp-Sci @ UMKC </p>
+      <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+        Learn More
+      </button>
+    </div>
+  </section>
+
+  <!--  PROFESSIONAL BIO  -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2>Professional Bio</h2>
+      <p>
+        I am a 3rd year studying Computer Science at the University of Missouri-Kansas City with an emphasis in cybersecurity. 
+      </p>
+      <p>
+        When I’m not coding, you’ll find me exploring new UI trends, playing video games, and networking.
+      </p>
+    </div>
+  </section>
+
+  <!--  EDUCATION BACKGROUND  -->
+  <section id="education" class="education">
+    
+	<h2>Education Background</h2>
+    	
+	<div class="education-content">
+    
+	<h3>Pursuing Bachelor of Science in Computer Science</h3>
+    
+	<p><strong>University of Missouri-Kansas City</strong> | Expected Graduation: 2027</p>
+      <p>
+        My education has given me a solid foundation in both theory and practical application. 
+        I have learned a lot throughout my degree such as learning new languages, data structures, and how to build relationships.
+      </p>
+
+      <h4>Relevant Courswork:</h4>
+      <ul>
+        <li>Web Development - Learned SQL, JavaScript, HTML, and REACT frameworks.</li>
+        <li>Data Structures and Algorithms - Applied and learned many data structures in C++</li>
+        <li> Intro to Python & C ++ - Learned basics of Python and C++: Loops, Classes, Polymorphism, etc..</li>
+        <li> Digital Forensics: Worked on how to solve stynography, cryptography, and just how to use command line in Kali VM. </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESUME  -->
+  <section id="resume" class="resume">
+    <h2>Resume</h2>
+    <p>You can view or download my most recent resume below.</p>
+    <a href="Muhammad_Chaudhry_Resume.pdf" class="resume-btn" target="_blank">📄 View My Resume</a>
+  </section>
+
+  <!--  CONTACT SECTION  -->
+  <section id="contact" class="contact">
+    <h2>Let’s Connect!</h2>
+    <p>Have a project or opportunity? I’d love to hear from you.</p>
+    <a href="mailto:muhammadchaudary263@gmail.com">Say Hello</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Muhammad Chaudhry. All rights reserved.
+  </footer>
+</body>
+</html>
