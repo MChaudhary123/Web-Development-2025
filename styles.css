@@ -1,0 +1,310 @@
+/*  Minimal Portfolio Styles  */
+:root {
+  --bg: #f7f7f9;
+  --surface: #ffffff;
+  --text: #1b1b1f;
+  --muted: #4a4f55;
+  --primary: #008000; /* green */
+  --accent: #2660A4;  /* blue (links) */
+  --link-hover: #1f4f83;
+  --max-width: 1000px;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 8px 20px rgba(0,0,0,.06);
+  --shadow-md: 0 10px 26px rgba(0,0,0,.10);
+}
+
+/* Base */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: "Source Sans Pro", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
+  margin: 0 0 .6rem 0;
+  line-height: 1.25;
+  letter-spacing: .2px;
+}
+h1 { font-size: clamp(2rem, 2.2vw + 1rem, 2.6rem); }
+h2 { font-size: clamp(1.4rem, 1vw + 1rem, 1.9rem); }
+h3 { font-size: 1.15rem; }
+p  { margin: .6rem 0 1rem; color: var(--muted); }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color .18s ease;
+}
+a:hover { color: var(--link-hover); }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  box-shadow: var(--shadow);
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+nav h2 { font-weight: 800; }
+nav a {
+  color: var(--text);
+  padding: .5rem .8rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+nav a:hover {
+  background: rgba(0,0,0,.04);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 1rem 3rem;
+  background: linear-gradient(180deg, #ffffff, #f2f4f7 70%);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.hero > div {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 18px;
+  padding: 2rem 1.5rem 2.2rem;
+  box-shadow: var(--shadow-md);
+}
+.hero h1 { font-weight: 900; }
+.hero p  { margin-bottom: 1.2rem; }
+
+/* Keep your image style (from your snippet) */
+.hero-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 4px solid #ffffff;
+  box-shadow: var(--shadow);
+}
+
+/* Simple button */
+.hero button,
+.resume-btn {
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  padding: .85rem 1.4rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+  box-shadow: 0 8px 18px rgba(0,128,0,.15);
+}
+.hero button:hover,
+.resume-btn:hover {
+  background: #0a7a0a;
+  transform: translateY(-1px);
+}
+
+/* About */
+.about { padding: 3rem 1rem; }
+.about .about-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  border: 1px solid rgba(0,0,0,.06);
+}
+.about h2 { color: var(--primary); }
+
+/* Education  */
+.education {
+  background: var(--bg);
+  padding: 3.5rem 1rem;
+}
+.education h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+}
+.education-content {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border: 1px solid rgba(0,0,0,.06);
+}
+.education-content h3 { color: var(--text); margin-bottom: .25rem; }
+.education-content h4 { color: var(--primary); margin-top: 1.1rem; }
+.education-content ul {
+  margin-top: .5rem;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+.education-content li { margin: .3rem 0; }
+
+/* Resume */
+.resume {
+  background: var(--surface);
+  text-align: center;
+  padding: 3.5rem 1rem;
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.resume h2 { color: var(--primary); }
+.resume p  { max-width: 680px; margin: .5rem auto 1.2rem; }
+.resume-btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Contact */
+.contact {
+  padding: 3rem 1rem 3.5rem;
+  text-align: center;
+}
+.contact h2 { color: var(--primary); }
+.contact p  { max-width: 680px; margin: .6rem auto 1.2rem; }
+.contact a {
+  display: inline-block;
+  padding: .7rem 1.1rem;
+  border-radius: 10px;
+  border: 1px dashed rgba(0,0,0,.15);
+  color: var(--primary);
+  font-weight: 700;
+}
+.contact a:hover {
+  background: rgba(0,128,0,.06);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.6rem 1rem 2rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+
+/* Dark Mode */
+body.dark {
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --text: #ffffff;
+  --muted: #c9c9c9;
+  --accent: #55aaff;
+  --primary: #0dbb0d;
+}
+
+/* Dark mode button */
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  z-index: 20;
+}
+
+/* Scroll to top button */
+.scroll-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: .7rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+
+/* Skills Grid */
+.skills {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.skills-box {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.skills-box span {
+  background: var(--surface);
+  padding: .6rem 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+}
+
+/* Projects */
+.projects {
+  padding: 3rem 1rem;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.project-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform .2s;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Experience */
+.experience {
+  padding: 3rem 1rem;
+}
+.exp-box {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}

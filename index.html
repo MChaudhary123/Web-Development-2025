@@ -1,0 +1,148 @@
+<!-- Muhammad Chaudhry -  Deliverable 2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome To My Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="container">
+    <h2 id="greeting">Welcome!</h2> <!-- Dynamic greeting updates here -->
+    <div>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- DARK MODE TOGGLE -->
+<button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <img src="Cover Photo.png" alt="Professional Image" class="hero-image" />
+    <h1>Hello, I'm Muhammad Chaudhry</h1>
+    <p>Software Developer | 3rd Year Comp-Sci @ UMKC</p>
+    <button onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+      Learn More
+    </button>
+  </div>
+</section>
+
+<!-- PROFESSIONAL BIO -->
+<section id="about" class="about">
+  <div class="about-content">
+    <h2>Professional Bio</h2>
+    <p>I am a 3rd year studying Computer Science at UMKC with an emphasis in cybersecurity.</p>
+    <p>Outside of coding, I enjoy exploring UI/UX trends, gaming, and connecting with others in tech.</p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="education">
+  <h2>Education Background</h2>
+
+  <div class="education-content">
+    <h3>B.S. Computer Science (In Progress)</h3>
+    <p><strong>University of Missouri-Kansas City</strong> | Expected Graduation: 2027</p>
+
+    <h4>Relevant Coursework</h4>
+    <ul>
+      <li>Web Development (SQL, JavaScript, HTML, React)</li>
+      <li>Data Structures & Algorithms (C++)</li>
+      <li>Intro to Python & C++</li>
+      <li>Digital Forensics (Kali Linux, stego, crypto, logs)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="skills-box">
+    <span>C++</span>
+    <span>Python</span>
+    <span>JavaScript</span>
+    <span>SQL</span>
+    <span>React</span>
+    <span>HTML/CSS</span>
+    <span>Digital Forensics</span>
+    <span>Git/GitHub</span>
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>POS System Enhancements</h3>
+      <p>Implemented credit price logic, manager PIN overrides, UI fixes, and dark mode for a production POS app.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Web Dev Portfolio</h3>
+      <p>A collection of interactive websites made for CS490 including a game gallery, travel guide, and café site.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Digital Forensics Labs</h3>
+      <p>Performed memory analysis, YARA rule creation, log triage, and network traffic investigation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORK EXPERIENCE -->
+<section id="experience" class="experience">
+  <h2>Work Experience</h2>
+
+  <div class="exp-box">
+    <h3>Software Developer Intern — Syncrostore</h3>
+    <p>Worked on POS system features using DevExpress, ASP.NET, SQL Server, and JavaScript.</p>
+  </div>
+
+  <div class="exp-box">
+    <h3>Information Services Student Assistant — UMKC</h3>
+    <p>Helped students with technical issues, maintained lab environments, and assisted with campus IT operations.</p>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="resume">
+  <h2>Resume</h2>
+  <p>You can view or download my most recent resume below.</p>
+  <a href="Muhammad_Chaudhry_Resume.pdf" class="resume-btn" target="_blank">📄 View My Resume</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Let’s Connect!</h2>
+  <p>Have a project or opportunity? I’d love to hear from you.</p>
+  <a href="mailto:muhammadchaudary263@gmail.com">Say Hello</a>
+</section>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button id="scrollTopBtn" class="scroll-top">↑</button>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Muhammad Chaudhry. All rights reserved.
+</footer>
+
+</body>
+</html>
